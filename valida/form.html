@@ -1,0 +1,20 @@
+ <html>
+ <head>
+
+	</head>
+<body>
+<form id="validationForm" name="validationForm">
+    <label forHTML="letras">Introduzca solo letras:</label>
+    <br>
+    <input type="text" id="letras" name="letras" onkeyup="validar()" onblur="validar()" />
+    <div id="message" style="position: absolute; left: 10px; top: 50px; background-color: Yellow; z-index: 10" hidden>
+      Introduzca solo letras (A-Z) o (a-z). Máximo 35 caracteres.
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="verificar()">Validar</button>
+  </form>
+  <script src="./valida.js"></script>
+Volver a publicación
+</body>
+ </html>

@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Ejemplo</title>
+    </head>
+    <body>
+      <form action="">
+        <input type="text" id="root" />
+        <button id="btn-envio">Enviar datos</button>
+      </form>
+      <div id="aviso"></div>
+    <script>
+        let rootInput    = document.getElementById("root")
+        let botonEnvio   = document.getElementById("btn-envio")
+        let aviso        = document.getElementById("aviso")
+        
+        class Formulario {
+          constructor(rootInput, botonEnvio) {
+            this.rootInput    = rootInput
+            this.botonEnvio   = botonEnvio
+          }
+          
+          validaElementos() {
+            this.botonEnvio.addEventListener("click", (event) => {
+              event.preventDefault();
+              (this.rootInput.value.trim() === "")
+                ? aviso.innerHTML = `El root es un valor requerido`
+                : aviso.innerHTML = `Formulario procesado con ${this.rootInput.value}`
+            })
+          }
+        }
+		   let formularioValidadoUno = new Formulario(rootInput, botonEnvio)
+        formularioValidadoUno.validaElementos()
+    </script>
+    </body>
+    </html>
