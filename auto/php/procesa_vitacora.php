@@ -1,4 +1,3 @@
-<?php include "../php/plantilla.php"?>
 <?php 	include "../conexion.php";?>
 <?php
 

@@ -1,4 +1,4 @@
-<?php include "../php/plantilla.php"?>
+<?php include "./plantilla.php";?>
 <?php 	include "../conexion.php";?>
 <?php
 
@@ -30,14 +30,15 @@ $resultado2=$mysqli->query($sql1);
 		<div class="col-md-3">
 
 		</div>
-		<div class="col-md-6">
-			<div class="display-5">Solicitud procesada</div>
+		<div class="col-md-6 pt-5">
+			<div class="display-5">Solicitud procesada con exito <i class="fas fa-check-circle"></i></div>
+			<div class="h5">redireccion a  bitacora en 5 seg. Gracias por usar SISI.</div>
 		</div>
 		<div class="col-md-3">
 
 		</div>
 	</div>
 </div><?php
-	}
+	}header("refresh:4;url=https://localhost/tienda/php/bitactora1.php");
 
 ?>
