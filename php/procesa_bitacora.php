@@ -24,6 +24,7 @@ $sql1="INSERT INTO `bitacora` (`id_registro`, `id_usuario`, `fecha`, `asunto`, `
 $resultado2=$mysqli->query($sql1);
 
 //echo "solicitud procesada";
+// pruebas de procesamiento
 ?>
 <div class="container">
 	<div class="row">
